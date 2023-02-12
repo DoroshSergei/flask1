@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Найдено со скиллом {{ skill_name }}: {{ quantity_candidates }}</h1>
+{% for candidate in candidates %}
+<p><a href="{{ url_for('candidate_page', x=candidate['id']) }}">{{ candidate["name"] }}</a></p>
+{% endfor %}
+{% endblock %}
